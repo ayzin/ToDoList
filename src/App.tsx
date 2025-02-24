@@ -1,10 +1,14 @@
+
+import { Provider } from "react-redux";
+import store from "./store";
 import FruitList from "./components/FruitList"
 import List from "./components/List"
 import VegetableList from "./components/VegetableList"
 
 function App() {
   return (
-    <div className="grid grid-cols-3  gap-2">
+    <Provider store={store}>
+      <div className="grid grid-cols-3  gap-2">
       <div>
         <List />
       </div>
@@ -14,9 +18,8 @@ function App() {
       <div>
         <VegetableList />
       </div>
-
-
     </div>
+    </Provider>
   )
 }
 
