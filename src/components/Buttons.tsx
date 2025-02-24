@@ -27,21 +27,16 @@ function Button({
 } : ButtonProps) {
   const classes = className(
     rest?.className,
-    'flex items-center justify-center px-5 py-5 border h-8 cursor-pointer',
+    'flex items-center justify-center px-5 py-5 border h-8 cursor-pointer transition-colors duration-200',
     {
       'opacity-80': loading,
-      'border-blue-500 bg-blue-500 text-gray-100': primary,
-      'border-gray-300 bg-gray-900 text-gray-100': secondary,
-      'border-green-500 bg-green-500 text-gray-100': success,
-      'border-yellow-400 bg-yellow-400 text-gray-100': warning,
-      'border-red-500 bg-red-500 text-gray-100': danger,
       'rounded-full': rounded,
       'bg-transparent': outline,
-      'border-blue-500 text-blue-600': outline && primary,
-      'text-gray-900': outline && secondary,
-      'border-green-500 text-green-500': outline && success,
-      'border-yellow-400 text-yellow-500': outline && warning,
-      'border-red-500 text-red-500': outline && danger,
+      'border-blue-500 text-blue-600 hover:bg-blue-100': outline && primary,
+      'border-gray-300 text-gray-900 hover:bg-gray-100': outline && secondary,
+      'border-green-500 text-green-500 hover:bg-green-100': outline && success,
+      'border-yellow-400 text-yellow-500 hover:bg-yellow-100': outline && warning,
+      'border-red-500 text-red-500 hover:bg-red-100': outline && danger,
     }
   );
   
